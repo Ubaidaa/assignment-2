@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* for_all styles  */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+
+ .top-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 35, 35);
+    
+    color: white;
+    border-radius: 15px;
+ }
+ .banner-text,.banner-image{
+    width: 40%;
+ }
+ .banner-heading{
+    font-size: 3em;
+    margin: 20px 0;
+ }
+ .button{
+    background-color: red;
+    width: fit-content;
+    padding: 10px 20px;
+    margin:20px 0;
+    border-radius: 20px;
+ }
+ .button>a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+ }
+ .button>a>p{
+    margin-left: 5px;
+ }
+
+
+@keyframes sliding {
+   0%{
+      background-color: red;
+      padding-right: 15px;
+   }
+   100%{
+      background-color: rgb(255, 79, 79);
+      padding-right: 25px;
+   }
+}
+.top-banner .button{
+   animation: sliding 0.7s ease-in-out 0s infinite forwards;
+}
+
+
+ .banner-image>img{
+    width: 100%;
+ }
+
+
+
+.middle-section{
+   display: flex;
+}
+
+.top-links{
+    background-color:rgb(35, 35, 35) ;
+    padding: 30px;
+    border-radius: 15px;
+}
+.links{
+    margin: 20px;
+    padding: 20px 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 30px;
+}
+.links>a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black;
+}
+#special-link{
+   background-color: red;
+   color: white;
+}
+#special-link>a{
+   color: white;
+}
+
+.grid-blogs{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-gap: 40px;
+   margin: 0 auto;
+}
+.blog{
+   box-shadow: 5px 5px 10px gainsboro;
+   border-radius: 10px;
+}
+.blog-thumbnail>img{
+   width: 100%;
+}
+
+.transfar{
+   border: 1px solid black;
+   border-radius: 10px;
+   width: fit-content;
+   padding: 7px 20px;
+   margin: 15px 15px;
+}
+.blog-text{
+   font-size: 20px;
+   font-weight: 700;
+   margin-left: 15px;
+}
+.blog-icons,.time,.comment{
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+.time,.comment{
+   width: 15%;
+   margin-left: 15px;
+   justify-content: space-between;
+}
+.extra-button{
+   display: none;
+}
+
+
+
+footer{
+   background-color: rgb(35, 35, 35);
+   text-align: center;
+   margin-top: 50px;
+   color: white;
+}
+footer>h2{
+   font-size: 35px;
+   padding: 30px;
+}
+hr{
+   border: 1px solid rgb(78, 78, 78);
+   width: 80%;
+   margin: 0 auto;
+}
+.footer-items,.footer-icons{
+   display: flex;
+   justify-content: center;
+}
+.footer-items>p{
+   margin: 20px;
+}
+.footer-icons>p{
+   font-size: 30px;
+   padding: 20px 30px;
+}
+
+
+
+
+
+/*All_media queries*/
+
+/* for mobile_devices */
+
+@media only screen and (max-width:688px) {
+   section{
+      width: 100%;
+   }
+
+
+   .top-banner{
+      flex-direction: column;
+   }
+   .banner-text,.banner-image{
+      width: 90%;
+   }
+   .banner-heading{
+      font-size: 2em;
+      margin: 20px 0;
+   } 
+
+
+
+   .middle-section{
+      flex-direction: column;
+   }
+   .top-links{
+      width: 60%;
+      margin: 0 auto;
+   }
+   .links{
+      padding: 10px;
+   }
+   .links>a{
+      font-size: 1em;
+   }
+   .grid-blogs{
+      grid-template-columns: 1fr;
+      margin-top: 50px;
+   }
+   .extra-button{
+      display: none;
+   }
+   .footer-items{
+      flex-direction: column;
+   }
+}
+
+
+
+
+/*for tablet_devices */
+
+@media only screen and (min-width:689px) and (max-width:992px) {
+   .middle-section{
+      flex-direction: column;
+      align-items: center;
+   }
+   .top-links{
+      background-color: white;
+      display: flex;
+      justify-content:center ;
+      align-items: center;
+      padding: 0;
+   }
+   .links{
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 15px 10px;
+
+   }
+   .grid-blogs{
+      grid-template-columns: repeat(2,1fr);
+      margin-top: 40px;
+   }
+   .grid-blogs>.blog:last-child{
+      display: none;
+   }
+   .extra-button{
+      display: block;
+      margin-top: 25px;
+   }
+   .extra-button>.button{
+      padding: 15px 30px;
+      font-size: 1.3em;
+   }
+   .footer-items{
+      width: 70%;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+   }
+}
